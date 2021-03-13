@@ -18,7 +18,8 @@ const appRoutes : Routes = [
   {path: 'certification', component : CertificationComponent},
   {path: 'learning', component : LearningComponent},
   {path: 'experience', component : ExperienceComponent},
-  {path: 'contact', component : ContactComponent}
+  {path: 'contact', component : ContactComponent},
+  {path: '**', component : HomeComponent}
 ];
 
 @NgModule({
