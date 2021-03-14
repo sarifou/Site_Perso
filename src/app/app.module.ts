@@ -11,10 +11,12 @@ import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { LearningComponent } from './learning/learning.component';
 import { CertificationComponent } from './certification/certification.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const appRoutes : Routes = [
   {path: 'home', component : HomeComponent},
   {path: 'project', component : ProjectComponent},
+  {path: 'project/project-detail/:id', component : ProjectDetailComponent},
   {path: 'certification', component : CertificationComponent},
   {path: 'learning', component : LearningComponent},
   {path: 'experience', component : ExperienceComponent},
@@ -31,7 +33,8 @@ const appRoutes : Routes = [
     ContactComponent,
     ExperienceComponent,
     LearningComponent,
-    CertificationComponent
+    CertificationComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

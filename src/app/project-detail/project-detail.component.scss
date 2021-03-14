@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.row-project {
+    padding-top: 15px;
+}
+.titre {
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+}
+.card-header {
+    font-family: 'Courgette', cursive;
+    font-size: 15px;
+    background-color: #2d313a;
+    color : #61DAFB;
+}
+.card-video {
+    padding: 2px;
+}
+.badge-termine {
+    background-color: #61DAFB;
+    font-size: 12px;
+    color: black;
+}
+.nav-link {
+    font-size: 17px;
+    color: black;
+    font-family: 'Courgette', cursive;
+}
+.contenu {
+    padding: 7px;
+    border: 1px solid;
+    border-color: #fff #dee2e6 #dee2e6 ;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 68vh;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}
