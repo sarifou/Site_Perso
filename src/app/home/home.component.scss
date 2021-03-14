@@ -1,17 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 .home {
-    height: 90vh;
+    height: calc(100vh - 63px);
     padding-top: 150px;
+    background-color: #2d313a;
 }
 .btn-custom {
     width: 150px;
     margin-right: 20px;
 }
 .welcome {
+    font-family: 'Courgette', cursive;
     font-size: 72px;
+    color: #61DAFB;
 }
 .name {
+    font-family: 'Courgette', cursive;
     font-size: 55px;
+    color: whitesmoke;
 }
 .title {
+    font-family: 'Courgette', cursive;
     font-size: 35px;
+    color: whitesmoke;
+}
+.btn-project {
+    font-family: 'Courgette', cursive;
+    background-color: #61DAFB;
+    color: #2d313a;
+}
+.btn-contact {
+    font-family: 'Courgette', cursive;
+    border-color: #61DAFB;
+    color: #61DAFB;
 }
