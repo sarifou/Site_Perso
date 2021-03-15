@@ -33,3 +33,24 @@
     border-color: #61DAFB;
     color: #61DAFB;
 }
+@media (max-width: 786px) {
+    .home {
+        padding-top: 50px;
+    }
+    .welcome {
+        font-size: 60px;
+    }
+    .name {
+        font-size: 45px;
+        line-height: 2px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .btn-project {
+        margin-bottom: 9px;
+    }
+    .btn-project , .btn-contact{
+        width: 100%;
+    }
+}
