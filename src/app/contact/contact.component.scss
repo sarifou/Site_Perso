@@ -132,6 +132,6 @@ textarea {
 .contact-form input:focus, textarea:focus {
 	border-color: #61DAFB
 }
-.contact-container {
-	height: calc(100vh - 63px);
+.contact {
+	height: calc(100vh - 63px) !important;
 }

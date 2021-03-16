@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "sarifoudiallo"
+  },
+  "targets": {
+    "sarifoudiallo": {
+      "hosting": {
+        "sarifoudiallo": [
+          "sarifoudiallo"
+        ]
+      }
+    }
   }
 }

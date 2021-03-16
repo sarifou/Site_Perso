@@ -13,6 +13,10 @@ import { LearningComponent } from './learning/learning.component';
 import { CertificationComponent } from './certification/certification.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment.prod';
+
 const appRoutes : Routes = [
   {path: 'home', component : HomeComponent},
   {path: 'project', component : ProjectComponent},
@@ -39,7 +43,9 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
