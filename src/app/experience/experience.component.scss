@@ -1,3 +1,18 @@
+.learning-container {
+  padding-top: 25px;
+}
+.learning-container-title h4 {
+  font-size: 30px;
+  font-family:  'Courgette', cursive;
+  font-weight: 600;
+}
+.timeline__event__title {
+  font-family  :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px !important;
+}
+.timeline__event__content {
+  width: 100% !important;
+}
 $content-width: calc(40vw - 84px);
 $margin: 20px;
 $spacing: 20px;
@@ -6,14 +21,14 @@ $circle-size: 40px;
 $icon-size: 32px;
 $bdrs-icon: 100%;
 
-$color1: #9251ac;
-$color2: #f6a4ec;
+$color1: #202527;
+$color2: #61DAFB;
 
-$color3: #87bbfe;
-$color4: #555ac0;
+$color3: #202527;
+$color4: #61DAFB;
 
-$color5: #24b47e;
-$color6: #aff1b6;
+$color5: #202527;
+$color6: #61DAFB;
 * {
   box-sizing: border-box;
 }
@@ -46,6 +61,7 @@ h2 {
       }
       .timeline__event__content {
         border-radius: $bdrs 0 0 $bdrs;
+        width: 100%;
       }
 
       .timeline__event__icon {
@@ -60,7 +76,7 @@ h2 {
           right: auto;
           z-index: -1;
           transform: translateX(-50%);
-          animation: fillTop 2s forwards 4s ease-in-out;
+          animation: fillTop 1s forwards 1s ease-in-out;
         }
         &:after {
           content: "";
@@ -73,7 +89,7 @@ h2 {
           top: 50%;
           left: auto;
           transform: translateY(-50%);
-          animation: fillLeft 2s forwards 4s ease-in-out;
+          animation: fillLeft 1s forwards 1s ease-in-out;
         }
       }
     }
@@ -140,7 +156,7 @@ h2 {
         z-index: -1;
         left: 50%;
         transform: translateX(-50%);
-        animation: fillTop 2s forwards 4s ease-in-out;
+        animation: fillTop 1s forwards 1s ease-in-out;
       }
       &:after {
         content: "";
@@ -152,7 +168,7 @@ h2 {
         z-index: -1;
         top: 50%;
         transform: translateY(-50%);
-        animation: fillLeftOdd 2s forwards 4s ease-in-out;
+        animation: fillLeftOdd 1s forwards 1s ease-in-out;
       }
     }
     &__description {
@@ -186,7 +202,7 @@ h2 {
         }
       }
       .timeline__event__title {
-        color: $color4;
+        color: $color1;
       }
       .timeline__event__title {
       }
@@ -303,11 +319,11 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     li {
-      background: #40484D;
+      background: #202527;
       border-radius: 2px;
       display: inline-block;
       padding: 2px 10px;
-      color: rgba(255,255,255,0.7);
+      color: #61DAFB;
       margin: 3px 2px;
       text-align: center;
       flex-grow: 1;
