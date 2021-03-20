@@ -3,70 +3,48 @@
         <div class="row row-project">
             <div class="col-lg-9">
                 <div class="titre">
-                    <p class="text-start">Usine 4.0 avec Robotino <span class="badge badge-termine">Terminé</span></p>
+                    <p class="text-start"> {{projet.nom}} <span class="badge badge-termine">Terminé</span></p>
                 </div>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
+                <ul class="nav nav-tabs" id="myTab" role="tablist" *ngIf="projet.contenu">
+                    <li class="nav-item" role="presentation" *ngFor="let tab of projet.contenu.tab; let id = index">
+                      <button class="nav-link" [ngClass]="{'active' : id == 0}" id="home-tab" data-bs-toggle="tab" attr.data-bs-target="{{tab.id}}" type="button" role="tab" aria-controls="home" aria-selected="true">{{tab.nom}}</button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Robotino</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Grafcet</button>
-                    </li>
-                  </ul>
-                  <div class="tab-content contenu" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-                        Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-                        Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-                        Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-                        Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-
+                </ul>
+                <div class="tab-content contenu" id="myTabContent" *ngIf="projet.contenu">
+                    <div class="tab-pane fade" [ngClass]= "{'show active' : tabContent.id == 'description'}" *ngFor="let tabContent of projet.contenu.tabContent" [id]="tabContent.id" role="tabpanel" aria-labelledby="home-tab">
+                        {{tabContent.contenu}}
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <p>
-                            Robotino is based on an omnidirectional drive assembly, which enables the system to roam freely. The robot is controlled by an industry-standard PC system, which is powerful enough to plan routes for fully autonomous driving. Via a WLAN-Link, Robotino can send all sensor readings to an external PC. In the other direction, control commands can be issued by the external PC. This way, control programs can run on the external PC or on Robotino directly. Mixed mode or shared control are also possible.
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
-                    </div>
-                  </div>
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
                     <div class="card-header">Vidéo demo</div>
                     <div class="card-body card-video">
-                        <iframe  width="100%" height="auto" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen></iframe>
+                        <iframe  width="100%" height="auto" src="#" frameborder="0" allowfullscreen></iframe>
                     </div>
-                  </div>
-                  <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
+                </div>
+                <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
                     <div class="card-header">Ressources</div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fa fa-github" style="display : inline">
-                                <a href="http://" style="color:black">  Code source sur GitHub</a> </i>
+                        <ul class="list-group list-group-flush" *ngIf="projet.Ressources">
+                            <li class="list-group-item" style="background-color : transparent" *ngFor="let ressource of projet.Ressources">
+                                <i class="fa fa-github" style="display : inline">
+                                    <a [href]="ressource.url" style="color:black; text-decoration: none;" target="_blank">  {{ressource.nom}}</a> 
+                                </i>
                             </li>
-                          </ul>
+                        </ul>
                     </div>
-                  </div>
+                </div>
                   <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
-                    <div class="card-header">Logiciel</div>
+                    <div class="card-header">Logiciels</div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                        <ul class="list-group list-group-flush" *ngIf="projet.Logiciels">
+                            <li class="list-group-item" style="background-color : transparent" *ngFor="let logiciel of projet.Logiciels">
                                 <i class="fa fa-bandcamp">
-                                    <a href="http://" style="color:black">  Robotino view</a>
+                                    <a [href]="logiciel.url" style="color:black ; text-decoration : none ;" target="_blank">   {{logiciel.nom}}</a>
                                 </i>
                             </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-bandcamp">
-                                    <a href="http://" style="color:black">  Robotino Sim pro</a>
-                                </i>
-                            </li>
-                          </ul>
+                        </ul>
                     </div>
                   </div>
             </div>

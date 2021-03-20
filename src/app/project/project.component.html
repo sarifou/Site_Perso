@@ -1,19 +1,19 @@
 <div class="container project-container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100" routerLink="project-detail/0">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-sm-2 g-4">
+        <div class="col" *ngFor="let project of projects; let i = index">
+            <div class="card h-100"  [routerLink]="['project-detail', i]">
               <img src="/assets/imgs/Robotino.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                  <h5 class="card-title">Robotino</h5>
-                  <p class="card-text">Programmation des robotinos pour une usine 4.0</p>
+                  <h5 class="card-title">{{project.nom}}</h5>
+                  <p class="card-text">{{project.description}}</p>
               </div>
               <ul class="list-group list-group-flush">
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{project.progression}}%</div>
                 </div>
               </ul>
               <div class="card-footer">
-                  <small class="text-muted">Dernière mise à jour : il y a 2 semaines</small>
+                  <small class="text-muted">Dernière mise à jour : {{project.update}}</small>
               </div>
             </div>
         </div>
