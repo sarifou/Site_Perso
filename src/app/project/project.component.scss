@@ -1,8 +1,37 @@
 
 .project-container {
-    padding-top: 50px;
+    padding-top: 25px;
 }
 .card-title {
     font-family: 'Courgette', cursive;
-    text-align: center;
+    text-align: justify;
+}
+.project-container-title {
+    padding-bottom: 30px;
+}
+.project-container-title h4 {
+    font-size: 30px;
+    font-family:  'Courgette', cursive;
+    font-weight: 600;
+}
+.project-card {
+    box-shadow: 2px 2px 10px #555;
+    height: 300px;
+}
+.project-title {
+    font-size: 14px;
+    padding-bottom: 0px;
+}
+.bouton {
+    border-color: #61DAFB;
+    color: #61DAFB;
+}
+.card-footer {
+    background-color: #2d313a;
+}
+@media (max-width: 576px) {
+    .project-card {
+        width: 85%;
+        margin: auto;
+    }
 }
