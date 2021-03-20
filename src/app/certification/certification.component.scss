@@ -1,3 +1,25 @@
 .certification-container {
-    padding-top: 50px;
+    padding-top: 25px;
+}
+.project-container-title {
+    padding-bottom: 30px;
+}
+.project-container-title h4 {
+    font-size: 30px;
+    font-family:  'Courgette', cursive;
+    font-weight: 600;
+}
+.card-title {
+    font-family: 'Courgette', cursive;
+    font-size: 15px;
+}
+.card-certification {
+    box-shadow: 2px 2px 10px #555;
+    height: 270px;
+}
+@media (max-width: 576px) {
+    .card-certification {
+        width: 80%;
+        margin: auto;
+    }
 }
