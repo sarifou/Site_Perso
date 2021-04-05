@@ -5,7 +5,7 @@
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-sm-2 g-4">
         <div class="col" *ngFor="let project of projects; let i = index">
             <div class="card project-card"  [routerLink]="['project-detail', i]">
-              <img src="/assets/imgs/Robotino.jpg" height="160" class="card-img-top" alt="...">
+              <img [src]="project.url" height="160" class="card-img-top" alt="...">
               <div class="card-body" *ngIf="project.nom">
                   <h5 class="card-title project-title">{{project.nom}}</h5>
               </div>

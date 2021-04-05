@@ -23,9 +23,14 @@ export class ProjectComponent implements OnInit {
           ({ key: c.payload.key, ...c.payload.val() }) 
         ))
     ).subscribe(data => {
-      this.projects = data ;
-      console.log(this.projects);
+      this.projects = data;
+      data.forEach( (elt: any, key) => {
+        this.projectService.getImage(elt.image).getDownloadURL().then(url => {
+          this.projects[key].url = url;
+        })
+      })
     })
+    
   }
 
 }

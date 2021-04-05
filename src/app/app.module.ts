@@ -15,6 +15,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment.prod';
 
 const appRoutes : Routes = [
@@ -45,7 +46,8 @@ const appRoutes : Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
