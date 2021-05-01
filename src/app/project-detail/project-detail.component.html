@@ -2,8 +2,9 @@
     <div class="container">
         <div class="row row-project">
             <div class="col-lg-9">
-                <div class="titre">
-                    <p class="text-start"> {{projet.nom}} <span class="badge badge-termine">Terminé</span></p>
+                <div class="titre" *ngIf="projet.nom">
+                    <p class="text-start"> {{projet.nom}}
+                    </p>
                 </div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist" *ngIf="projet.contenu">
                     <li class="nav-item" role="presentation" *ngFor="let tab of projet.contenu.tab; let id = index">
@@ -22,7 +23,7 @@
                 <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
                     <div class="card-header">Vidéo demo</div>
                     <div class="card-body card-video">
-                        <iframe  width="100%" height="auto" src="#" frameborder="0" allowfullscreen></iframe>
+                        <iframe  width="100%" height="auto" src="" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
@@ -30,8 +31,8 @@
                     <div class="card-body">
                         <ul class="list-group list-group-flush" *ngIf="projet.Ressources">
                             <li class="list-group-item" style="background-color : transparent" *ngFor="let ressource of projet.Ressources">
-                                <i class="fa fa-github" style="display : inline">
-                                    <a [href]="ressource.url" style="color:black; text-decoration: none;" target="_blank">  {{ressource.nom}}</a> 
+                                <i class="fa fa-github lien" >
+                                    <a [href]="ressource.url" target="_blank">  {{ressource.nom}}</a> 
                                 </i>
                             </li>
                         </ul>
@@ -42,8 +43,8 @@
                     <div class="card-body">
                         <ul class="list-group list-group-flush" *ngIf="projet.Logiciels">
                             <li class="list-group-item" style="background-color : transparent" *ngFor="let logiciel of projet.Logiciels">
-                                <i class="fa fa-bandcamp">
-                                    <a [href]="logiciel.url" style="color:black ; text-decoration : none ;" target="_blank">   {{logiciel.nom}}</a>
+                                <i class="fa fa-bandcamp lien">
+                                    <a [href]="logiciel.url" target="_blank">   {{logiciel.nom}}</a>
                                 </i>
                             </li>
                         </ul>
