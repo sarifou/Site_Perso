@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { ProjectService } from 'src/app/services/project/project.service';
+import { ProjectService } from '../services/project/project.service';
+import { GlobalService } from '../global-variable/global.service';
 
 @Component({
   selector: 'app-project',
@@ -10,9 +11,10 @@ import { ProjectService } from 'src/app/services/project/project.service';
 export class ProjectComponent implements OnInit {
   projects = [] as any;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private headService: GlobalService) { }
 
   ngOnInit(): void {
+    this.headService.changeHead(false);
     this.getAllProjects();
   }
 
@@ -24,13 +26,8 @@ export class ProjectComponent implements OnInit {
         ))
     ).subscribe(data => {
       this.projects = data;
-      data.forEach( (elt: any, key) => {
-        this.projectService.getImage(elt.image).getDownloadURL().then(url => {
-          this.projects[key].url = url;
-        })
-      })
+      console.log(this.projects);
     })
-    
   }
 
 }

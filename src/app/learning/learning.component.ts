@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../global-variable/global.service';
 
 @Component({
   selector: 'app-learning',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearningComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headService: GlobalService) { }
 
   ngOnInit(): void {
+    this.headService.changeHead(false)
   }
 
 }

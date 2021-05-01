@@ -1,51 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 .home {
-    height: calc(100vh - 63px);
+    height: 100vh;
     padding-top: 150px;
-    background-color: #2d313a;
+    background-image: url("../../assets/imgs/back.jpg");
 }
 .btn-custom {
     width: 150px;
     margin-right: 20px;
 }
 .welcome {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     font-size: 72px;
     color: #61DAFB;
 }
 .name {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     font-size: 55px;
     color: whitesmoke;
 }
 .title {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     font-size: 35px;
     color: whitesmoke;
 }
 .btn-project {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     background-color: #61DAFB;
     color: #2d313a;
 }
 .btn-contact {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     border-color: #61DAFB;
     color: #61DAFB;
 }
 @media (max-width: 786px) {
     .home {
-        padding-top: 50px;
+        padding-top: 100px;
     }
     .welcome {
         font-size: 60px;
+        text-align: center !important;
     }
     .name {
         font-size: 45px;
         line-height: 2px;
+        text-align: center !important;
     }
     .title {
         font-size: 25px;
+        text-align: center !important;
     }
     .btn-project {
         margin-bottom: 9px;
