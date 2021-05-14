@@ -1,31 +1,24 @@
-<nav class="navbar navbar-expand-lg" [ngClass]="{'navigation' : head, 'navigation-second' : !head}">
-  <div class="container">
-    <a class="navbar-brand brand-name" routerLink="home">
-      Sarifou
-    </a>
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-        <i class="fa fa-bars" style="color:#fff; font-size:25px;"></i>
-      </span>
-    </button>
-    <div class="collapse navbar-right navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav nav-header-item">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" aria-current="page" routerLink="project">Projets</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="learning">Formations</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="certification">Certifications</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="experience">Expériences</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="contact">Contacts</a>
-        </li>
-      </ul>
+<div class="header-container">
+  <div class="number">
+    <div class="phone">
+      <div class="phone-line"></div>
     </div>
+    <span>+33 748211699</span>
   </div>
-</nav>
+  <nav class="header-link">
+    <ul>
+      <li>
+        <a href="">Projets</a>
+      </li>
+      <li>
+        <a href="">Expériences</a>
+      </li>
+      <li>
+        <a href="">Formations</a>
+      </li>
+      <li>
+        <a href="">Certifications</a>
+      </li>
+    </ul>
+  </nav>
+</div>
