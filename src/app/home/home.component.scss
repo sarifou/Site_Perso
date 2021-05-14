@@ -40,6 +40,7 @@
 @media (max-width: 786px) {
     .home {
         padding-top: 100px;
+        height: 100%;
     }
     .welcome {
         font-size: 60px;
@@ -59,5 +60,8 @@
     }
     .btn-project , .btn-contact{
         width: 100%;
+    }
+    .bg-home {
+        padding-top: 100px;
     }
 }

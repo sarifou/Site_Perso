@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment.prod';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const appRoutes : Routes = [
   {path: 'home', component : HomeComponent},
@@ -39,7 +40,8 @@ const appRoutes : Routes = [
     ExperienceComponent,
     LearningComponent,
     CertificationComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
