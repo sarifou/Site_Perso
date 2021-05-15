@@ -61,7 +61,7 @@
     text-decoration: none;
     color: #8B8B8B;
     padding: 13px 35px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 2px;
     position: relative;
@@ -97,4 +97,7 @@
     width: 80px;
     height: 100%;
     background-color: #FAC921;
+}
+.active-item {
+    color: #FAC921 !important;
 }
