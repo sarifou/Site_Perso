@@ -3,19 +3,19 @@
     height: 100%;
     position: relative;
 }
-.element-container {
-    width: calc(100% - 80px);
-    position: absolute;
-    right: 0;
-}
-.app-sidebar {
-    position: fixed;
-    left: 0px;
-    height: 0px;
-}
 .app-header {
     position: fixed;
     top: 0;
+    right: 0;
     z-index: 100;
+}
+.app-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 101;
+}
+.router-container {
     width: 100%;
+    padding-left: 80px;
 }

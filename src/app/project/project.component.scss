@@ -2,6 +2,94 @@
     margin-top: 80px;
     padding-top: 25px;
 }
+.projet {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.projet-container {
+    margin-bottom: 50px;
+}
+.section-subtitle {
+    font-size: 120px;
+    transform: translateZ(0px) translateY(52.896px);
+    font-weight: 900;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    right: 0;
+    opacity: 0.3;
+    text-align: left;
+    color: #ccc;
+    text-transform: uppercase;
+}
+.section-subtitle span {
+    color: #85827b;
+}
+.clear {
+    clear: both;
+}
+.conteneur {
+    max-width: 1224px;
+    width: 92%;
+    margin : 0 auto ;
+    position: relative;
+    z-index: 5;
+  }
+.conteneur::before {
+    content: '';
+    display: table;
+}
+.conteneur::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.section-title {
+    padding: 20px 0 20px 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    background: #FAC921;
+    top: 0;
+    left: -2px;
+    width: 4px;
+    height: 100%;
+  }
+  .section-title h3 {
+    padding-bottom: 30px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    color: #999;
+  }
+  .section-title h3::before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100px;
+    height: 1px;
+    border-bottom: 1px dotted #666;
+  }
+  .section-title h2 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(50, 58, 69);
+    position: relative;
+    padding-bottom: 30px;
+  }
+.card {
+    cursor: pointer;
+}
 .card-title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     text-align: center;
@@ -40,9 +128,10 @@
     display: inline-block;
     width: 10px !important;
     height: 10px !important;
-    background-color: #0b3852;
+    background-color: #FAC921;
     border-radius: 50%;
 }
+
 @media (max-width: 576px) {
     .project-card {
         width: 85%;

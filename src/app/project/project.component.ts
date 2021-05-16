@@ -26,7 +26,7 @@ export class ProjectComponent implements OnInit {
         ))
     ).subscribe(data => {
       this.projects = data;
-      console.log(this.projects);
+      this.projects.sort(()=> Math.random() - 0.5)
     })
   }
 
