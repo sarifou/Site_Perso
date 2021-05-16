@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   head : boolean = false ;
+  display : boolean = false ;
   headSubs: Subscription = new Subscription;
   constructor(private headService : GlobalService) { }
 
@@ -17,5 +18,8 @@ export class HeaderComponent implements OnInit {
       this.head = head ;
     }) 
   }
-
+  onDisplay() {
+    this.display = ! this.display;
+    console.log(this.display);
+  }
 }

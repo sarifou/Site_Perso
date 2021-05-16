@@ -21,7 +21,67 @@
       </li>
     </ul>
   </nav>
-  <div class="message">
+  <div class="message" (click)="onDisplay()">
     <i class="fa fa-envelope"></i>
+  </div>
+  <div class="contact" *ngIf="display==true">
+    <div class="contact-container">
+      <h3>Me contacter</h3>
+      <p>Merci de remplir ce formulaire pour me contacter ou bien utiliser mes coordonnées ci-dessous.</p>
+      <div class="contact-form">
+        <form action="">
+          <div class="name">
+            <input type="text" placeholder="Votre nom">
+          </div>
+          <div class="email">
+            <input type="email" placeholder="Votre addresse mail">
+          </div>
+          <div class="message-content">
+            <textarea name="" id="" rows="5" placeholder="Votre message"></textarea>
+          </div>
+          <div class="button-submit">
+            <input type="submit" value="Envoyer">
+          </div>
+        </form>
+      </div>
+      <div class="contact-list">
+        <ul>
+          <li>
+            <i class="fa fa-phone"></i>
+            <span class="span1">Tel :</span>
+            <span class="span2">+ 33 74 821 16 99</span>
+          </li>
+          <li>
+            <i class="fa fa-envelope"></i>
+            <span class="span1">Email :</span>
+            <span class="span2">diallo.msdpro@gmail.com</span>
+          </li>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <span class="span1">Adresse :</span>
+            <span class="span2">Lille France</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-social-item">
+        <ul>
+          <li>
+            <a href="">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

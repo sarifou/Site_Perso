@@ -8,6 +8,15 @@
     position: relative;
     top : 0;
 }
+.contact {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 1000;
+    height: 550;
+    width: 400px;
+    background-color: #2A2A2E;
+}
 .number {
     position: relative;
     text-align: center;
@@ -48,7 +57,7 @@
     position: relative;
     background-color: #2A2A2E;
     padding: 23px 40px 0;
-    width: calc(75% - 80px) ;
+    width: 100% ;
 }
 .header-link ul {
     list-style: none;
@@ -66,6 +75,9 @@
     font-weight: 600;
     letter-spacing: 2px;
     position: relative;
+}
+.header-link ul li a:hover {
+    color: #fac72177;
 }
 .header-link ul li a::before {
     content: '';
@@ -99,6 +111,121 @@
     height: 100%;
     background-color: #FAC921;
 }
+.message i {
+    -webkit-box-reflect : below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(250, 250, 250, 0.4)));
+}
 .active-item {
     color: #FAC921 !important;
+}
+.contact-container {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+.contact-container h3 {
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+.contact-container p {
+    color: rgba(255, 255, 255, 0.71);
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    line-height: 24px;
+    padding-bottom: 5px;
+}
+.contact-form {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.name input, .email input, .message-content textarea {
+    background-color: rgba(255, 255, 255, 0.11);
+    border: none;
+    color: #fff;
+    width: 100%;
+    float: left;
+    padding: 10px 15px;
+    margin-bottom: 7px;
+}
+.button-submit input{
+    background-color: #FAC921;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+.contact-list {
+    margin-top: 10px;
+    border-top: 1px dotted rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+.contact-list ul {
+    list-style: none;
+    margin-top: 18px;
+    padding: 0;
+}
+.contact-list ul li {
+    float: left;
+    width: 100%;
+    padding: 2px 0;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.contact-list ul li i {
+    color: #FAC921;
+    font-weight: 400;
+    font-size: 14px;
+    float: left;
+    padding-right: 10px;
+    position: relative;
+    top : 2px;
+}
+.contact-list ul .span2 {
+    float: left;
+    color: #fff;
+    text-align: left;
+}
+.contact-list ul .span1 {
+    float: left;
+    text-align: left;
+    color: #999;
+    padding-right: 10px;
+}
+.contact-social-item {
+    margin-top: 20px;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.contact-social-item ul {
+    list-style: none;
+}
+.contact-social-item ul li {
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+.contact-social-item ul li a {
+    float: left;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.41);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 200ms linear;
+    text-decoration: none;
+    text-align: center;
+}
+.contact-social-item ul li a:hover {
+    border-radius: 50%;
+    color: #fff;
+    border-color: #fff;
 }
