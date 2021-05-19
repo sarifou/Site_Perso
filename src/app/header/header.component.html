@@ -29,15 +29,15 @@
       <h3>Me contacter</h3>
       <p>Merci de remplir ce formulaire pour me contacter ou bien utiliser mes coordonnées ci-dessous.</p>
       <div class="contact-form">
-        <form action="">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
           <div class="name">
-            <input type="text" placeholder="Votre nom">
+            <input type="text" placeholder="Votre nom" id="name" name="name" ngModel>
           </div>
           <div class="email">
-            <input type="email" placeholder="Votre addresse mail">
+            <input type="email" placeholder="Votre addresse mail" id="email" name="email" ngModel>
           </div>
           <div class="message-content">
-            <textarea name="" id="" rows="5" placeholder="Votre message"></textarea>
+            <textarea name="" id="" rows="5" placeholder="Votre message" id="message" name="message" ngModel></textarea>
           </div>
           <div class="button-submit">
             <input type="submit" value="Envoyer">
