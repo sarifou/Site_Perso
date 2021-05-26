@@ -24,4 +24,7 @@ export class ProjectService {
   getImage(image: any) {
     return this.storage.storage.ref('images/' + image);
   }
+  getCV () {
+    return this.storage.storage.ref('cv/cv.pdf');
+  }
 }
