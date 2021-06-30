@@ -1,4 +1,5 @@
 .firebase
 dist
 node_modules
+src/environments
 .firebaserc
