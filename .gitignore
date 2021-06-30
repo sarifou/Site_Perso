@@ -1,4 +1,0 @@
-.firebase
-dist
-node_modules
-src/environments/environment.prod.ts
